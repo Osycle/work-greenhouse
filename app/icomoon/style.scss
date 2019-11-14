@@ -1,0 +1,75 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9wj47y');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9wj47y#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?9wj47y') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?9wj47y') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?9wj47y##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icm-"], [class*=" icm-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icm-envelope {
+  &:before {
+    content: $icm-envelope; 
+  }
+}
+.icm-helmet {
+  &:before {
+    content: $icm-helmet; 
+  }
+}
+.icm-improvement {
+  &:before {
+    content: $icm-improvement; 
+  }
+}
+.icm-phone-call {
+  &:before {
+    content: $icm-phone-call; 
+  }
+}
+.icm-project {
+  &:before {
+    content: $icm-project; 
+  }
+}
+.icm-smartphone {
+  &:before {
+    content: $icm-smartphone; 
+  }
+}
+.icm-address {
+  &:before {
+    content: $icm-address; 
+  }
+}
+.icm-agronomy {
+  &:before {
+    content: $icm-agronomy; 
+  }
+}
+.icm-anvil {
+  &:before {
+    content: $icm-anvil; 
+  }
+}
+
