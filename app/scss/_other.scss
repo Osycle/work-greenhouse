@@ -581,9 +581,10 @@ div.owl-nav{
 	//position: absolute;
 }
 .owl-btn{
-	background-color: #333;
-	width: 40px;
-	height: 40px;
+	//background-color: #333;
+	background-image: linear-gradient(to right, #c88823, #ffd266);
+	width: 50px;
+	height: 50px;
 	z-index:2;
 	display: inline-block;
 	display: flex;
@@ -596,13 +597,10 @@ div.owl-nav{
 		border: none;
 		cursor: pointer;
 		filter: brightness(60%);
-		.arrow{
-			fill: white;
-		}
 	}
 
 	.arrow{
-		fill: $color-1;
+		fill: black;
 	}
 	svg{
 		width: 50px;

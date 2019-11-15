@@ -203,7 +203,7 @@
 				imagesLoaded: true,
 				autoPlay: 6000,
 				pauseAutoPlayOnHover: true,
-				arrowShape: "M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z",
+				arrowShape: "M 40,50 L 55,65 L 55,60 L 45,50  L 55,40 L 55,35 Z",
 				initialIndex: 0,
 				friction: 0.5,
 				//selectedAttraction: 1,

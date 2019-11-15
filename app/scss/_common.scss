@@ -4,9 +4,9 @@
 		--Variables--
 */
 
-$color-1: #ffcc33 !default;
-$color-2: #002768 !default;
-$color-3: #409b24 !default;
+$color-1: #4fa023 !default;
+$color-2: #fe8900 !default;
+$color-3: #4f9429 !default;
 $color-4: #f15045 !default;
 $color-5: #65a328 !default;
 $color-special-1: #2e1c11;
@@ -642,6 +642,12 @@ table {
 	}	
 	//hover
 	&:not(.changecolor-none):hover{
+		filter: contrast(120%);
+	}
+	&:active{
+		box-shadow: inset 0px 2px 5px 1px rgba(black, 0.2);
+		border-color: transparent;
+		//box-shadow: 0 0 20px -2px rgba(black, 0.1);
 	}
 	&.icon-right{
 		span{
