@@ -210,7 +210,7 @@
 				prevNextButtons: !checkSm(),
 				draggable: false,
 				wrapAround: true,
-				pageDots: true,
+				pageDots: false,
 				contain: false,
 				percentPosition: true,
 				cellSelector: 'figure',

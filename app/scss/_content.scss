@@ -82,10 +82,18 @@ small{
 		line-height: 170%;
 		font-size: em(18);
 	}
-	b{
-		font-weight: 900;
+	&.link-content{
+		position: relative;
+		@media (min-width: 992px){
+			a{
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				color: #1a80d7;
+				position: absolute;
+			}
+		}
 	}
-
 	@media (min-width: 992px) {
 		h1{
 			position: relative;
@@ -118,6 +126,30 @@ small{
 	}
 	@media (max-width: 991px) {
 		h1{
+			&:before{
+				display: none;
+			}
+		}
+	}
+}
+.h1-style-2{
+	h1:not(.no-style){
+		
+		&:before{
+			@extend .clafclear;
+			width: 40px;
+			pointer-events: none;
+			top: 50%;
+			margin-left: -15px;
+			transform: translate(-100%, -50%);
+			background-color: $color-1;
+			height: 4px;
+
+		}
+		@media (min-width: 992px){
+			padding-left: 60px;
+		}
+		@media (max-width: 991px){
 			&:before{
 				display: none;
 			}
@@ -179,22 +211,6 @@ figcaption{
 .bnr-slider{
 	position: relative;
 	overflow: hidden;
-}
-@keyframes swing{
-	to, from{
-		transform: translateY(-20%);
-	}
-	50%{
-		transform: translateY(0%);
-	}
-}
-@keyframes swing2{
-	to, from{
-		transform: scale(1);
-	}
-	50%{
-		transform: scale(0.3);
-	}
 }
 
 .bnr-carousel{
@@ -328,6 +344,9 @@ figcaption{
 			border-radius: 30px;
 		}
 		@media (max-width: 991px) {
+			.img-content{
+				display: none;
+			}
 			.align-i-center{
 				height: 250px;
 			}
@@ -453,6 +472,9 @@ figcaption{
 		min-width: 60px;
 		font-size: 40px;
 	}
+	@media (max-width: 991px){
+		display: none;
+	}
 }
 
 
@@ -468,5 +490,279 @@ figcaption{
 		background-color: white;
 		left: 30px;
 		z-index: 1;
+	}
+}
+
+
+
+//content
+.convex{
+	position: relative;
+	border-radius: 10px;
+	&:before{
+		@extend .clafclear;
+		left: 0;
+		top: 0;
+		border-radius: inherit;
+		background-color: inherit;
+		border-bottom: 8px solid rgba(black, 0.15);
+	}
+}
+//short-services
+.short-services{
+	background-image: url('../img/bg/short-services.jpg');
+	background-position: center bottom;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.short-services-items{
+	*{
+		backface-visibility: hidden;
+	}
+	figure, .boxes-cell{
+		@extend .convex;
+		background-color: #f6f6f6;
+		background: $gradient-gray-1;
+		padding: 40px 40px;
+		box-shadow: 0 0 5px rgba(black, 0.1);
+		margin-top: 15px;
+		margin-bottom: 15px;
+		transition: all 0.3s ease;
+		@media (min-width: 992px){
+			margin-top: 60px;
+		}
+		&:hover{
+			background-color: $color-1;
+			color: white;
+			transform: translateY(-10px);
+			.img-content{
+				transform: scale(0.95);
+				border-color: $color-1;
+				backface-visibility: hidden;
+			}
+			&:before{
+				
+			}
+		}
+	}
+	i{
+		&:before{
+			backface-visibility: hidden;
+		}
+	}
+	.img-content{
+		backface-visibility: hidden;
+		transition: all 0.3s ease;
+		position: relative;
+		background-color: white;
+		margin-top: -100px;
+		width: 140px;
+		height: 140px;
+		margin-bottom: 20px;
+		border: 12px solid #f1f1f1;
+		border-radius: 50%;
+		color: $color-1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 65px;
+	}
+	@media (max-width: 991px){
+		.img-content{
+			margin-top: 0;
+			margin: auto;
+		}
+		figure{
+			padding: 20px 15px;
+		}
+	}
+}
+
+//short-about
+.short-about{
+	background-image: url('../img/bg/short-about.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 650px;
+	.desc-content{
+		&>h1{
+			position: relative;
+			&:after{
+				@extend .clafclear;
+				height: 4px;
+				width: 30%;
+				margin-left: 30px;
+				background-color: $color-1;
+				@extend .trans-v-center;
+				@media (max-width: 991px ){
+					display: none;
+				}
+			}
+		}
+	}
+	.text-item{
+
+	}
+	.content-wrapper{
+		background-color: white;
+		padding: 20px 15px;
+		@extend .shadow-def;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		position: relative;
+		@media (min-width: 992px){
+			padding: 75px;
+			margin-top: 80px;
+			margin-bottom: -200px;
+		}
+	}
+}
+
+//short-advantages
+.short-advantages{
+	background-color: #f8f8f8;
+	background-image: url('../img/bg/short-advantages.png');
+	background-position: center bottom;
+	background-size: auto;
+	background-repeat: no-repeat;
+	@media (max-width: 991px) {
+		background-image: none;
+	}
+	.entry-header{
+		text-align: center;
+		@media (min-width: 991px) {
+			margin-top: 100px;
+		}
+	}
+}
+.short-advantages-items{
+	.num{
+		width: 30px;
+		height: 30px;
+		background-color: $color-1;
+		color: white;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		border-radius: 50%;
+		justify-content: center;
+		@media (max-width: 991px){
+			margin: auto;
+		}
+	}
+}
+
+//short-productions
+.short-productions{
+	background-image: url('../img/bg/short-productions.jpg');
+	background-position: left bottom;
+	background-size: auto;
+	background-repeat: no-repeat;	
+}
+.short-productions-items{
+	.img-content{
+		position: relative;
+		h4{
+			position: absolute;
+			bottom: 10px;
+			left: 30px;
+			color: white;
+			text-shadow: 0 0 3px rgba(black, 0.4);
+		}
+	}
+	.desc-content{
+		display: flex;
+		margin-top: 20px;
+		.text{
+			line-height: 190%;
+			color: $color-gray-4;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.num{
+			font-size: 110px;
+			color: $color-1;
+			line-height: 80%;
+			font-weight: 1000;
+			text-shadow: 0 4px 0 $color-3;
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+	}
+	.img{
+		height: 380px;
+		background-size: cover;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
+	}
+}
+
+
+
+//short-news
+.short-news{
+	background-image: url('../img/bg/short-news.jpg');
+		padding-bottom: 40px;
+	@media (max-width: 991px){
+	}
+}
+.short-news-items{
+	.fig-wrapper{
+		background-color: white;
+		border-radius: 15px;
+		overflow: hidden;
+		display: flex;
+		height: 345px;
+	}
+	.img-content{
+		min-width: 270px;
+		height: 100%;
+		.img{
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+	.desc-content{
+		padding: 15px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		small{
+			color: $color-1;
+		}
+		p{
+			min-height: 160px;
+		}
+	}
+	.btn-def{
+		max-width: 170px;
+		margin-top: 15px;
+		a{
+			padding-left: 15px;
+			padding-right: 15px;
+			font-size: 0.9em;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+	@media (max-width: 991px){
+
+		.fig-wrapper{
+			height: auto;
+			display: block;
+			.desc-content{
+				align-items: center;
+			}
+			.img-content{
+				min-width: auto;
+			}
+			.img{
+				height: 250px;
+			}
+		}
 	}
 }
