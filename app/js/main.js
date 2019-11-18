@@ -40,44 +40,16 @@
 		/*Owl carousel*/
 		var owlBtn = [
 			'<span class="owl-btn previous">'+
-				'<svg viewBox="0 0 100 100"><path d="M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z" class="arrow"></path></svg>'+
+				'<svg viewBox="0 0 100 100"><path d="M 40,50 L 55,65 L 55,60 L 45,50  L 55,40 L 55,35 Z" class="arrow"></path></svg>'+
 			'</span>', 
 			'<span class="owl-btn next">'+
-				'<svg viewBox="0 0 100 100"><path d="M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z" class="arrow"></path></svg>'+
+				'<svg viewBox="0 0 100 100"><path d="M 40,50 L 55,65 L 55,60 L 45,50  L 55,40 L 55,35 Z" class="arrow"></path></svg>'+
 			'</span>'
 		]
 
 
 
-		$(".short-special-items.owl-carousel").owlCarousel({
-			nav: true,
-			//items: 3,
-			dots: true,
-			dotsEach: true,
-			autoplay: true,
-			touchDrag: false,
-			responsive:{
-				0:{items:1},
-				991:{items:2}
-			},
-			navText : owlBtn,
-			margin: 30
-		});
-		$(".offers-items.owl-carousel").owlCarousel({
-			nav: true,
-			//items: 3,
-			dots: !checkSm(),
-			dotsEach: true,
-			autoplay: true,
-			touchDrag: false,
-			responsive:{
-				0:{items:1},
-				991:{items:1}
-			},
-			navText : owlBtn,
-			margin: 30
-		});
-		$(".compl-items.owl-carousel").owlCarousel({
+		$(".short-partners-items.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,
 			dots: false,
@@ -86,11 +58,12 @@
 			touchDrag: false,
 			responsive:{
 				0:{items:1},
-				991:{items:3}
+				991:{items:5}
 			},
 			navText : owlBtn,
-			margin: 30
+			margin: 0
 		});
+
 
 		/*$(".certifications-items.owl-carousel").owlCarousel({
 			nav: true,

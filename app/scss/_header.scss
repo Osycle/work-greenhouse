@@ -147,22 +147,21 @@ $header-min-menu: 70px;
 
 
 .socicons{
-	font-size: 14px;
+	font-size: 18px;
 	text-align: center;
 	.list{
 		margin-top: 15px;
 		margin-bottom: 15px;
 	}
+	.fa-paper-plane{
+		font-size: em(12);
+	}
 	li{
 		display: inline-block;
-		margin-left: 4px;
+		margin-left: 15px;
 		justify-content: center;
 		text-align: center;
 		font-size: em(16);
-		&:hover{
-			color: $color-1;
-			background-color: rgba(white, 0.1);
-		}
 		&:nth-child(1){
 			margin-left: 0;
 		}
@@ -175,7 +174,6 @@ $header-min-menu: 70px;
 			}
 		}
 	}
-
 }
 
 .menu{
@@ -383,6 +381,7 @@ ul[class*="sub-menu"]{
 	.min-menu-logo{
 		padding: 12px 0;
 		width: 100%;
+		@extend .filter-black;
 		h1{
 			font-size: 25px;
 		}
@@ -708,8 +707,8 @@ textarea.form-control{
 
 
 .form-def{
-	background-color: $color-3;
-	color: white;
+	background-color: white;
+	color: black;
 	overflow: visible;
 	max-width: 370px;
 	@media (min-width: 992px){
