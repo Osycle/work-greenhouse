@@ -980,7 +980,7 @@ h1, h2, h3, h4{
 h1{
 	font-size: em(36);
 	margin-bottom: 15px;
-	font-weight: 700;
+	font-weight: 800;
 	line-height: 120%;
 	@media (max-width: 991px) {
 		font-size: em(26);
@@ -1006,8 +1006,8 @@ h4{
 }
 h5{	
 	line-height: 150%;
-	font-weight: 700;
-	font-size: em(13);
+	font-weight: 800;
+	font-size: em(16);
 }
 
 .h-style-1{
@@ -1108,9 +1108,21 @@ hr{
   white-space: nowrap;
 }
 .text-item{
-	
+	iframe{
+		width: 80%;
+		height: 400px;
+		margin-left: 10%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			height: 210px;
+			width: 100%;
+			margin-left: auto;
+		}
+	}
 	p{
-		line-height: 170%;
+		line-height: 200%;
+		text-align: justify;
 		color: $color-gray-5;
 		margin-bottom: 20px;
 		font-weight: 500;
